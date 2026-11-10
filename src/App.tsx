@@ -22,8 +22,10 @@ function App() {
             </Grid>
 
             {/* Selector */}
-            <Grid size={{ xs: 12, md: 3 }}>
-                <SelectorUI />
+            <Grid size={{ xs: 12, md: 12 }}
+                container sx={{ justifyContent: 'flex-end', alignItems: 'center', spacing: 2 }}>
+                <AlertUI description="No se prevén lluvias" />
+                <AlertUI description="Índice UV alto" severity="warning" variant="filled" />
             </Grid>
             
 
