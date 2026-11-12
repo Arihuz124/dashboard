@@ -3,7 +3,11 @@ import { Grid } from '@mui/material';
 import HeaderUI from './components/HeaderUI';
 import AlertUI from './components/AlertUI';
 import SelectorUI from './components/SelectorUI';
+import { useState } from 'react';
+import { string } from 'prop-types';
 function App() {
+    const [selectedCity, setSelectedCity] = useState('');
+
     return (
         <Grid container spacing={5} sx={{ justifyContent: 'center', alignItems: 'center' }}>
 
@@ -22,15 +26,15 @@ function App() {
             </Grid>
 
             {/* Selector */}
-            <Grid size={{ xs: 12, md: 12 }}
-                container sx={{ justifyContent: 'flex-end', alignItems: 'center', spacing: 2 }}>
-                <AlertUI description="No se prevén lluvias" />
-                <AlertUI description="Índice UV alto" severity="warning" variant="filled" />
+            <Grid size={{ xs: 12, md: 3 }}>
+                <SelectorUI city={selectedCity} onCityChange={setSelectedCity} />
             </Grid>
             
 
             {/* Indicadores */}
-            <Grid size={{ xs: 12, md: 9 }}>Elemento: Indicadores</Grid>
+            <Grid size={{ xs: 12, md: 9 }}>
+                Elemento: Indicadores {selectedCity && `para ${selectedCity}`}
+            </Grid>
 
             {/* Gráfico */}
             <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
