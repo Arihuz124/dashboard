@@ -28,6 +28,7 @@ function App() {
             <Grid size={{ xs: 12, md: 3 }}>
                 <SelectorUI />
             </Grid>
+            
 
             {/* Indicadores */}
 <Grid container size={{ xs: 12, md: 9 }}>
