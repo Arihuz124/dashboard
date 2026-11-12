@@ -39,7 +39,7 @@ function App() {
                 description={`${dataFetcherOutput.current.temperature_2m} ${dataFetcherOutput.current_units.temperature_2m}`} />)
         }
     </Grid>
-
+{/*ad*/}
     <Grid size={{ xs: 12, md: 3 }}>
         {dataFetcherOutput &&
             (<IndicatorUI
