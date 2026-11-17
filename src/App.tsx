@@ -73,7 +73,7 @@ function App() {
 
             </Grid>
 
-            {/* Gráficoada */}
+            {/* Gráficoadsa */}
             <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                 {data && (
                     <ChartUI
