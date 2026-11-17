@@ -20,7 +20,7 @@ function App() {
     return (
         <Grid container spacing={5} sx={{ justifyContent: 'center', alignItems: 'center' }}>
 
-            {/* Encabezadooooo */}
+            {/* Encabezadooadasdaooo */}
             <Grid size={{ xs: 12, md: 12 }}>
                 <HeaderUI />
             </Grid>
