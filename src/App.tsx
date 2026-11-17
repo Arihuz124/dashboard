@@ -35,6 +35,7 @@ function App() {
             <Grid size={{ xs: 12, md: 3 }}>
                 <SelectorUI onOptionSelect={setSelectedOption} />
             </Grid>
+            
 
             {/* Indicadores */}
             <Grid container size={{ xs: 12, md: 9 }}>
