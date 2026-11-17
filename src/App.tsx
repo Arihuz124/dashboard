@@ -37,7 +37,7 @@ function App() {
             </Grid>
             
 
-            {/* Indicadores */}
+            {/* Indicadoress */}
             <Grid container size={{ xs: 12, md: 9 }}>
 
                 {loading && <CircularProgress />}
