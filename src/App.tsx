@@ -20,7 +20,7 @@ function App() {
     return (
         <Grid container spacing={5} sx={{ justifyContent: 'center', alignItems: 'center' }}>
 
-            {/* Encabezadooadasdaooo */}
+            {/* Encabezado */}
             <Grid size={{ xs: 12, md: 12 }}>
                 <HeaderUI />
             </Grid>
@@ -35,9 +35,8 @@ function App() {
             <Grid size={{ xs: 12, md: 3 }}>
                 <SelectorUI onOptionSelect={setSelectedOption} />
             </Grid>
-            
 
-            {/* Indicadoress */}
+            {/* Indicadores */}
             <Grid container size={{ xs: 12, md: 9 }}>
 
                 {loading && <CircularProgress />}
@@ -73,7 +72,7 @@ function App() {
 
             </Grid>
 
-            {/* Gráficoadsa */}
+            {/* Gráfico */}
             <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                 {data && (
                     <ChartUI
@@ -98,7 +97,7 @@ function App() {
                 )}
             </Grid>
 
-            {/* Información dadicional */}
+            {/* Información adicional */}
             <Grid size={{ xs: 12, md: 12 }}>Elemento: Información adicional</Grid>
 
         </Grid>
