@@ -97,7 +97,7 @@ function App() {
                 )}
             </Grid>
 
-            {/* Información adicional */}
+            {/* Información adiciodnal */}
             <Grid size={{ xs: 12, md: 12 }}>Elemento: Información adicional</Grid>
 
         </Grid>
