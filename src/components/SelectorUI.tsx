@@ -3,19 +3,17 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select, { type SelectChangeEvent } from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-//ada
 interface SelectorProps {
     onOptionSelect: (option: string) => void;
 }
-export default function SelectorUI({ onOptionSelect }: SelectorProps) {
 
+export default function SelectorUI({ onOptionSelect }: SelectorProps) {
     const [cityInput, setCityInput] = useState('');
 
     const handleChange = (event: SelectChangeEvent<string>) => {
-        const selectedValue = event.target.value;
-        setCityInput(selectedValue);
-        onOptionSelect(selectedValue);
-
+        const value = event.target.value;
+        setCityInput(value);
+        onOptionSelect(value);
     };
 
     return (
@@ -27,25 +25,8 @@ export default function SelectorUI({ onOptionSelect }: SelectorProps) {
                 label="Ciudad"
                 value={cityInput}
                 onChange={handleChange}
-                sx={{
-                    backgroundColor: '#fff',
-                    borderRadius: 1,
-                    '& .MuiOutlinedInput-notchedOutline': {
-                        borderColor: '#bdbdbd',
-                    },
-                    '&:hover .MuiOutlinedInput-notchedOutline': {
-                        borderColor: '#757575',
-                    },
-                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                        borderColor: '#1976d2',
-                    },
-                }}
-                MenuProps={{
-                    PaperProps: {
-                        sx: { backgroundColor: '#fff' },
-                    },
-                }}>
-                <MenuItem disabled><em>Seleccione una ciudad</em></MenuItem>
+            >
+                <MenuItem disabled value=""><em>Seleccione una ciudad</em></MenuItem>
                 <MenuItem value={'guayaquil'}>Guayaquil</MenuItem>
                 <MenuItem value={'quito'}>Quito</MenuItem>
                 <MenuItem value={'manta'}>Manta</MenuItem>
